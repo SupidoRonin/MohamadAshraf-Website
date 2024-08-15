@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="Projects.css">
     <link rel="icon" href="../Images/Logo.jpg">
     <title>Mohamad Ashraf - Website</title>
 </head>
@@ -11,33 +11,48 @@
     
     <header class="Main-header">
 
-        <a href="#Home" class="Logo"> Mohamad <span>Ashraf.</span></a>
+        <a href="../Main.html" class="Logo"> Mohamad <span>Ashraf.</span></a>
         
         <ion-icon name="menu" id="Menu-icon" class="Menu-icon"></ion-icon>
 
         <nav class="Navigation-bar">
-            <a href="../Main.html">Home</a>
-            <a href="#AboutMe">About Me</a>
-            <a href="#MyProjects">My Projects</a>
-            <a href="#ContactMe">Contact Me</a>
+            <a href="#Home">Home</a>
+            <a href="../Main.html#AboutMe">About Me</a>
+            <a href="../Main.html#MyProjects">My Projects</a>
+            <a href="../Main.html#ContactMe">Contact Me</a>
             <a href="../Arabic/مشروعاتي/Projects.html">عربي</a>
         </nav>
 
     </header>
 
-    <section id="Home" class="Home">
+    <section class="MyProjects" id="MyProjects">
 
+        <h2 class="Heading">My <span>Game's</span></h2>
+        
+        <div class="Projects-Container">
+
+            <div class="Project-Box">
+                <div class="Project-Info">
+                    <img height="120px" width="120px" style="border-radius: 50%;" src="../Images/Logo.jpg" alt="" id="Info-img">
+                    <h4>Balloon Avoid</h4>
+                    <p>You must avoid Enemy attacks such as the Saw, Cannon, Middle</p> <br>
+                    <a href="My Projects/Projects.html">Let's see</a>
+                </div>
+            </div>
+
+        </div>
+    
     </section>
 
     <footer>
         
         <div class="Social-Icons">
                 
-            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="https://github.com/SupidoRonin"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="https://www.instagram.com/devmohamadashraf/"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://www.facebook.com/profile.php?id=100081470787467"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://wa.me/01017714180"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="https://discord.com/channels/@devmohamad"><ion-icon name="logo-discord"></ion-icon></a>
         
         </div>
 
@@ -62,13 +77,16 @@
         <p class="copyright">
             © Mohamad Ashraf | All Rights Reserved
         </p>
-
     </footer>
 
-    <script src="Script.js"></script>
+    <script src="Script.js">
+
+    </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
 </body>
 </html>
