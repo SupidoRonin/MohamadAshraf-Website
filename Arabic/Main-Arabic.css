@@ -484,6 +484,16 @@ footer .copyright{
     bottom: 0;
     right: 0;
 }
+
+@keyframes hummenu{
+    from{
+        transform: translateX(-1000%);
+    }
+
+    to{
+        transform: translateX(0);
+    }
+}
   
 @keyframes spin {
     0% {
@@ -562,13 +572,14 @@ footer .copyright{
     .Navigation-bar{
         position: absolute;
         top: 100%;
-        right: 0;
+        left: 0;
         width: 50%;
         padding: 1rem 3rem;
         background-color: var(--second-bg-color);
-        border-left: 2px solid var(--main-color);
+        border-right: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
         border-bottom-left-radius: 2rem;
+        animation: hummenu 0.7s ease;
     }
 
     .Navigation-bar a{
