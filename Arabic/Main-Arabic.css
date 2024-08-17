@@ -513,6 +513,7 @@ footer .copyright{
     #Menu-icon{
         display: block;
         position: fixed;
+        left: 0;
     }
 
     .Navigation-bar{
@@ -524,7 +525,7 @@ footer .copyright{
         background-color: var(--second-bg-color);
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
         animation: hummenu 0.7s ease;
     }
 
