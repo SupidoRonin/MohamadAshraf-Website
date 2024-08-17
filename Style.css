@@ -512,12 +512,13 @@ footer .copyright{
 @media(max-width:1024px){
     #Menu-icon{
         display: block;
+        position: fixed;
     }
 
     .Navigation-bar{
-        position: absolute;
+        position: fixed;
         top: 100%;
-        right: 0;
+        left: 0;
         width: 50%;
         padding: 1rem 3rem;
         background-color: var(--second-bg-color);
@@ -542,6 +543,7 @@ footer .copyright{
         flex-direction: column-reverse;
         margin: 5rem 0;
         gap: 5rem;
+        width: 100%;
     }
 
     .Home-Content{
@@ -556,6 +558,7 @@ footer .copyright{
     .AboutMe{
         flex-direction: column-reverse;
         text-align: center;
+        width: 100%;
     }
 
     .AboutMe h2{
@@ -568,6 +571,7 @@ footer .copyright{
     }
 
     .card{
+        left: 50%;
         width: 210;
         height: 100;
     }
@@ -584,4 +588,6 @@ footer .copyright{
     .card-h{
         font-size: 1rem;
     }
+
+
 }
