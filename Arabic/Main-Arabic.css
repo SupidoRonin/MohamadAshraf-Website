@@ -523,7 +523,7 @@ footer .copyright{
         width: 50%;
         padding: 1rem 3rem;
         background-color: var(--second-bg-color);
-        border-left: 2px solid var(--main-color);
+        border-right: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
         border-bottom-right-radius: 2rem;
         animation: hummenu 0.7s ease;
