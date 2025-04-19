@@ -43,6 +43,17 @@ section{
     scroll-snap-align: center;
 }
 
+ion-icon{
+    font-size: 15px;
+    color: var(--main-color);
+    margin-top: 20px;
+}
+
+li{
+	list-style-type: none;
+	font-family: sans-serif;
+}
+
 /* Colors */
 
 :root{
@@ -203,6 +214,10 @@ section{
     text-align: left;
 }
 
+.About-Content .details{
+    font-size: 2rem;
+}
+
 .About-Content p{
     font-size: 2rem;
 }
@@ -259,9 +274,60 @@ section{
     background-color: var(--main-color);
 }
 
+/* Skills Section */
+.skills{
+	width: 100%;
+	margin: 60px auto;
+	color: #fff;
+}
+
+.skills li{
+	margin: 20px 0;
+}
+
+.skills h3{
+	margin: 20px 0;
+    font-size: 1.7rem;
+}
+
+.bar{
+	background-color: #353b48;
+	display: block;
+	height: 10px;
+	border-radius: 50px;
+	overflow: hidden;
+	box-shadow: 0 0 10px var(--main-color);
+}
+
+.bar span{
+	height: 100%;
+	float: left;
+	background-color: var(--main-color);
+}
+
+.html{
+	width: 99%;
+	animation: html 2s;
+}
+
+.css{
+	width: 85%;
+	animation: css 2s;
+}
+
+.javascript{
+	width: 50%;
+	animation: javascript 2s;
+}
+
+.python{
+	width: 99%;
+	animation: python 2s;
+}
+
 /* Project Section */
 .MyProjects{
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
     color: black;
 }
 
@@ -312,6 +378,11 @@ section{
 
 .Project-Info ion-icon{
     font-size: 8rem;
+    color: var(--bg-color);
+}
+
+.Project-Info:hover ion-icon{
+    color: var(--main-color);
 }
 
 .Project-Info h4{
@@ -425,7 +496,7 @@ section{
 
 .app-contact a{
     text-decoration: none;
-    color: var(--second-main-color);
+    color: var(--main-color);
     font-weight: 900;
     font-size: 2rem;
 }
@@ -434,7 +505,7 @@ section{
     display: flex;
     flex-direction: column;
     position: relative;
-    color: var(--second-main-color);
+    color: var(--main-color);
     font-size: 26px;
 }
   
@@ -446,7 +517,7 @@ section{
     bottom: -10px;
     width: 25px;
     height: 4px;
-    background: var(--second-main-color);
+    background: var(--main-color);
 }
   
 .app-contact {
@@ -492,14 +563,14 @@ section{
     padding: 5px;
     background: none;
     border: none;
-    color: var(--second-main-color);
+    color: var(--main-color);
     font-size: 14px;
     cursor: pointer;
     outline: none;
 }
   
 .app-form-button:hover {
-    color: var(--second-main-color);
+    color: var(--main-color);
 }
   
 .credits {
@@ -525,6 +596,10 @@ section{
     width: 20px;
     height: 20px;
     margin: 0 5px;
+}
+
+.container .Social-Icons{
+    margin-top: 150px;
 }
 
 /* Footer Section */
@@ -643,6 +718,58 @@ footer .copyright{
     }
 }
 
+@keyframes hide{
+    from{
+        transform: translateX(0);
+        display: block;
+    }
+
+    to{
+        transform: translateX(1000%);
+        display: none;
+    }
+}
+
+@keyframes html{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 99%;
+	}
+}
+
+@keyframes css{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 85%;
+	}
+}
+
+@keyframes javascript{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 50%;
+	}
+}
+
+@keyframes python{
+	0%{
+		width: 0%;
+	}
+
+	100%{
+		width: 99%;
+	}
+}
+
 /* Responsive */
 
 @media(max-width:820px){
@@ -650,19 +777,21 @@ footer .copyright{
         display: block;
         position: fixed;
         right: 0;
-        animation: goright 0.7s ease;
+        
     }
 
     .Navigation-bar{
         position: fixed;
         top: 100%;
         right: 0;
-        width: 35%;
+        width: 25%;
         padding: 1rem 3rem;
         background-color: var(--second-bg-color);
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
         border-bottom-left-radius: 2rem;
+        align-items: center;
+        justify-content: center;
         animation: hummenu 0.7s ease;
     }
 
@@ -670,6 +799,7 @@ footer .copyright{
         display: block;
         font-size: 2.7rem;
         margin: 3rem;
+        text-align: center;
         color: var(--font-color);
     }
 
@@ -679,7 +809,7 @@ footer .copyright{
     }
 
     .Navigation-bar.active{
-        animation: hummas 0.7s ease ;
+        animation: hide 0.7s ease;
         display: none;
     }
 
@@ -716,7 +846,7 @@ footer .copyright{
 
     .app-contact a{
         text-decoration: none;
-        color: var(--second-main-color);
+
         font-weight: 900;
         font-size: 1.3rem;
     }
@@ -725,6 +855,23 @@ footer .copyright{
         font-size: 15px;
     }
 
+    ion-icon{
+        font-size: 10px;
+        color: var(--main-color);
+    }
+
+}
+
+@media(max-width:700px){
+    .Navigation-bar a{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:580px){
+    .Navigation-bar a{
+        font-size: 1.7rem;
+    }
 }
 
 @media screen and (max-width: 520px) {
