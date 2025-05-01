@@ -884,11 +884,11 @@ footer .copyright{
 }
 
 @keyframes push_401 {
-    0% , 50% {
+    from {
       transform: translate(-50% , 0%)  scale(1)
     }
   
-    100% {
+    to {
       transform: translate(-50%, -100%) scale(0)
     }
 }
