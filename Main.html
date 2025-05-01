@@ -13,6 +13,12 @@
 </head>
 
 <body>
+    <!-- Circular Cursor -->
+     <div class="cursor" id="cursor">
+        <div class="cursor-dot" id="dot"></div>
+        <div class="cursor-outline" id="outline"></div>
+     </div>
+
     <!-- Header -->
     <header class="Main-header">
         <!-- Header Logo -->
@@ -26,6 +32,7 @@
             <a href="#Home">Home</a>
             <a href="#AboutMe">About Me</a>
             <a href="#Skills">Skills</a>
+            <a href="#Cources">My Cources</a>
             <a href="#MyProjects">My Projects</a>
             <a href="#ContactMe">Contact Me</a>
         </nav>
@@ -38,11 +45,11 @@
         <div class="Home-Content">
 
             <!-- Home Heading -->
-            <h1>Hey, Here is <span>Mohamad Ashraf.</span></h1>
+            <h1 id="outline">Hey, Here is <span id="outline">Mohamad Ashraf.</span></h1>
             <!-- Multiple Text -->
-            <h3><span class="multiple-text"></span></h3>
+            <h3 id="outline"><span id="outline" class="multiple-text"></span></h3>
             <!-- Home Paragraph -->
-            <p>Programmer & <span>Trainer</span>, Game <span>Developer</span>, Web & App <span>Developer</span></p>
+            <p id="outline">Programmer & <span id="outline">Trainer</span>, Game <span id="outline">Developer</span>, Web & App <span id="outline">Developer</span></p>
             
             <!-- My Social Media Links -->
             <div class="Social-Icons">
@@ -80,14 +87,14 @@
         <!-- About Me Content -->
         <div class="About-Content">
             <h2>About <span>Me</span></h2>
-            <h3 class="details">Details: </h3>
+            <h3 class="details" id="outline">Details: </h3>
             <br>
-            <p>
-                <span>Name:</span> Mohamad Ashraf Ahmad.
+            <p id="outline">
+                <span id="outline">Name:</span> Mohamad Ashraf Ahmad.
                 <br>
-                <span>Age & Birth:</span> 15, 2009 / <span>September</span> / 03.
+                <span id="outline">Age & Birth:</span> 15, 2009 / <span>September</span> / 03.
                 <br>
-                <span>Location:</span> El Zahraa, <span>Dokki</span>, Giza, <span>Egypt</span>.
+                <span id="outline">Location:</span> El Zahraa, <span>Dokki</span>, Giza, <span>Egypt</span>.
             </p>
 
             <!-- Contact Me Button -->
@@ -123,6 +130,14 @@
         </div>
 
     </section>
+
+    <!-- My Cources Section -->
+     <section class="Cources" id="Cources">
+        <!-- Cources Heading -->
+        <h2 class="Heading">My <span>Cources</span></h2>
+        
+        <h1 id="outline">Coming Soon!</h1>
+     </section>
 
     <!-- My Project Section -->
     <section class="MyProjects" id="MyProjects">
@@ -256,6 +271,11 @@
             © Mohamad Ashraf | All Rights Reserved
         </p>
     </footer>
+
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="spin"></div>
+    </div>
 
     <!-- Javascript Get Link -->
     <script src="Script.js"></script>
