@@ -130,7 +130,6 @@ li{
     font-size: 3rem;
     color: var(--font-color);
     font-weight: 800;
-    cursor: pointer;
     transition: 0.3s ease;
 }
 
@@ -745,7 +744,7 @@ footer .copyright{
     border-radius: 50%;
     background: #FFF;
     transform: translate(-50% , -100%)  scale(0);
-    animation: push_401 2s infinite linear;
+    animation: push_401 1.3s infinite linear;
 }
   
 .spin:after {
