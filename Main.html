@@ -29,13 +29,19 @@
 
         <!-- Navigation Bar Menu -->
         <nav class="Navigation-bar">
-            <a href="#Home">Home</a>
-            <a href="#AboutMe">About Me</a>
-            <a href="#Skills">Skills</a>
-            <a href="#Cources">My Cources</a>
-            <a href="#MyProjects">My Projects</a>
-            <a href="#ContactMe">Contact Me</a>
+            <a href="#Home" class="links">Home</a>
+            <a href="#AboutMe" class="links">About Me</a>
+            <a href="#Skills" class="links">Skills</a>
+            <a href="#Cources" class="links">My Cources</a>
+            <a href="#MyProjects" class="links">My Projects</a>
+            <a href="#ContactMe" class="links">Contact Me</a>
+            
         </nav>
+
+        <button id="mode-switch" class="mode-switch">
+            <ion-icon name="sunny-outline" id="Sun"></ion-icon>
+            <ion-icon name="moon" id="Moon"></ion-icon>
+        </button>
 
     </header>
 
@@ -132,12 +138,13 @@
     </section>
 
     <!-- My Cources Section -->
-     <section class="Cources" id="Cources">
+    <section class="Cources" id="Cources">
         <!-- Cources Heading -->
         <h2 class="Heading">My <span>Cources</span></h2>
-        
+
         <h1 id="outline">Coming Soon!</h1>
-     </section>
+        
+    </section>
 
     <!-- My Project Section -->
     <section class="MyProjects" id="MyProjects">
@@ -279,6 +286,9 @@
 
     <!-- Javascript Get Link -->
     <script src="Script.js"></script>
+
+    <!-- Javascript Save Mode System -->
+    <script type="text/javascript" src="lightmode.js" defer></script>
 
     <!-- Icons CDN Link -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
