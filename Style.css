@@ -47,7 +47,7 @@ section{
 ion-icon{
     font-size: 15px;
     color: var(--main-color);
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 li{
@@ -58,13 +58,29 @@ li{
 /* Colors */
 
 :root{
-    --bg-color: #1E201E;
-    --second-bg-color: #272829;
-    --font-color: #F8EDED;
-    --main-color: #7FA1C3;
-    --second-main-color: #F4CE14;
-    --black-color: #373A40;
-    --red-color: #FF6969;
+    /* Main */
+    --white-color: #f7fafc;
+
+    /* Dark Mode */
+    --bg-color: #222831;
+    --second-bg-color: #2D3138;
+    --font-color: #f7fafc;
+    --second-font-color: #e2e8f0;
+    --main-color: #83B4FF;
+
+    /* Box Buttons */
+    --second-main-color: #ffbd44;
+    --green-color: #00ca4e;
+    --red-color: #ff605c;
+}
+
+/* Light Mode */
+.light-mode{
+    --bg-color: #f7fafc;
+    --second-bg-color: #e2e8f0;
+    --font-color: #5D5D5D;
+    --second-font-color: #2D3138;
+    --main-color: #93A3B3;
 }
 
 /* Cursor */
@@ -97,7 +113,7 @@ li{
     left: 0;
     border-radius: 100%;
     z-index: 998;
-    backdrop-filter: grayscale(10);
+    /*backdrop-filter: grayscale(10);*/
     mix-blend-mode: difference;
     pointer-events: none;
     transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -111,10 +127,9 @@ li{
     top: 0;
     left: 0;
     padding: 1.5rem 5%;
-    background-color: var(--second-bg-color);
     backdrop-filter: blur(10px);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     z-index: 100;
 }
@@ -139,7 +154,7 @@ li{
 }
 
 
-.Navigation-bar a{
+.Navigation-bar .links{
     font-size: 2.5rem;
     color: var(--font-color);
     margin-left: 4rem;
@@ -148,7 +163,7 @@ li{
     transition: 0.3s ease;
 }
 
-.Navigation-bar a:hover{
+.Navigation-bar .links:hover{
     border-bottom: 3px solid var(--main-color);
     color: var(--main-color);
     cursor: none;
@@ -207,7 +222,7 @@ li{
 }
 
 .Social-Icons ion-icon{
-    color: #7FA1C3;
+    color: var(--main-color);
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -221,11 +236,31 @@ li{
 }
 
 .Social-Icons ion-icon:hover{
-    color: var(--font-color);
+    color: var(--bg-color);
     background-color: var(--main-color);
     transform: scale(1.2)translateY(-5px);
     box-shadow: 0 0 25px var(--main-color);
     cursor: none;
+}
+
+.mode-switch{
+    background: none;
+    border: none;
+    cursor: none;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode-switch ion-icon{
+    font-size: 4rem;
+}
+
+#Moon{
+    display: none;
 }
 
 /* About Section */
@@ -295,7 +330,7 @@ li{
     box-shadow: 0 0 25px var(--main-color);
     border-radius: 3rem;
     font-size: 1.8rem;
-    color: #1E201E;
+    color: var(--bg-color);
     border: 2px solid transparent;
     font-weight: 600;
     transition: 0.3s ease-in-out;
@@ -310,7 +345,7 @@ li{
 }
 
 .Button-Group a:nth-of-type(2){
-    background-color: #1E201E;
+    background-color: var(--bg-color);
     color: var(--main-color);
     border: 2px solid var(--main-color);
     box-shadow: 0 0 25px transparent;
@@ -343,7 +378,7 @@ li{
 }
 
 .bar{
-	background-color: #353b48;
+	background-color: var(--bg-color);
 	display: block;
 	height: 10px;
 	border-radius: 50px;
@@ -432,6 +467,18 @@ li{
     cursor: none;
 }
 
+.Project-Box:hover h4{
+    color: var(--main-color);
+}
+
+.Project-Box:hover p{
+    color: var(--main-color);
+}
+
+.Project-Box:hover ion-icon{
+    color: var(--main-color);
+}
+
 .Project-Info{
     display: flex;
     flex-direction: column;
@@ -446,18 +493,15 @@ li{
     color: var(--bg-color);
 }
 
-.Project-Info:hover ion-icon{
-    color: var(--main-color);
-    cursor: none;
-}
-
 .Project-Info h4{
+    color: var(--bg-color);
     font-size: 4rem;
     margin: 2rem 0;
     font-weight: 800;
 }
 
 .Project-Info p{
+    color: var(--bg-color);
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.7;
@@ -504,7 +548,7 @@ li{
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    background: var(--black-color);
+    background: var(--main-color);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -527,7 +571,7 @@ li{
 }
   
 .screen-header-button.maximize {
-    background: var(--main-color);
+    background: var(--green-color);
 }
   
 .screen-header-button.minimize {
@@ -717,7 +761,7 @@ footer .copyright{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1E201E;
+    background-color: var(--bg-color);
     z-index: 999;
     transition: opacity 0.7s, visibility 0.7s;
 }
@@ -742,7 +786,7 @@ footer .copyright{
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: #FFF;
+    background: var(--second-font-color);
     transform: translate(-50% , -100%)  scale(0);
     animation: push_401 1.3s infinite linear;
 }
