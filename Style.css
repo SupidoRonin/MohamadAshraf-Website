@@ -365,7 +365,7 @@ li{
 .skills{
 	width: 100%;
 	margin: 60px auto;
-	color: #fff;
+	color: var(--bg-color);
 }
 
 .skills li{
@@ -373,6 +373,7 @@ li{
 }
 
 .skills h3{
+    color: var(--font-color);
 	margin: 20px 0;
     font-size: 1.7rem;
 }
