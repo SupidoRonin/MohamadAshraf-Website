@@ -192,7 +192,7 @@
         <h2 class="Heading">Contact <span>Me</span></h2>
 
         <!-- Contact Me Box -->
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
             <div class="container">
               <div class="screen">
                 <div class="screen-header">
@@ -217,16 +217,16 @@
                   <div class="screen-body-item">
                     <div class="app-form">
                       <div class="app-form-group">
-                        <input class="app-form-control" placeholder="Name" type="text" name="name" id="name" required>
+                        <!--<ion-icon name="person"></ion-icon>--><input class="app-form-control" placeholder="Name" type="text" name="name" id="name" required>
                       </div>
                       <div class="app-form-group">
-                        <input class="app-form-control" placeholder="Email" type="email" name="email" id="email" required>
+                        <!--<ion-icon name="mail"></ion-icon>--><input class="app-form-control" placeholder="Email" type="email" name="email" id="email" required>
                       </div>
                       <div class="app-form-group">
-                        <input class="app-form-control" placeholder="Phone Number" type="number" name="phone-number" id="number" required>
+                        <!--<ion-icon name="call"></ion-icon>--><input class="app-form-control" placeholder="Phone Number" type="tel" maxlength="11" minlength="11" name="phone-number" id="phone" required>
                       </div>
                       <div class="app-form-group message">
-                        <input class="app-form-control" placeholder="Message" type="text" name="message" id="message" required>
+                       <!--<ion-icon name="send"></ion-icon>--><input class="app-form-control" placeholder="Message" type="text" name="message" id="message" class="message" required>
                       </div>
 
                       <input type="hidden" name="access_key" value="507c8d6b-a152-4ab9-a22b-2fde590d1c54">
@@ -312,6 +312,10 @@
 
     <!-- Icons Usage Link -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Phone Number CDN -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 
 </body>
 </html>
