@@ -361,57 +361,180 @@ li{
 /* Skills Section */
 .Skills{
     background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 120vh;
+    padding-top: 40px; /* add this */
 }
 
-.skills{
-	width: 100%;
-	margin: 60px auto;
-	color: var(--bg-color);
+.skills_wrapper{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start; /* add this */
 }
 
-.skills li{
-	margin: 20px 0;
-}
-
-.skills h3{
+.technical_skills{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     color: var(--font-color);
-	margin: 20px 0;
-    font-size: 1.7rem;
+    width: 50%;
+    margin-top: 40px;
+
 }
 
-.bar{
-	background-color: var(--bg-color);
-	display: block;
-	height: 10px;
-	border-radius: 50px;
-	overflow: hidden;
-	box-shadow: 0 0 10px var(--main-color);
+.technical_skills .skills{
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
 }
 
-.bar span{
-	height: 100%;
-	float: left;
-	background-color: var(--main-color);
+.technical_skills h3{
+    font-size: 2.3rem;
 }
 
-.html{
-	width: 99%;
-	animation: html 2s;
+.technical_skills .head{
+    font-size: 26px;
+    color: var(--font-color);
 }
 
-.css{
-	width: 85%;
-	animation: css 2s;
+.technical_skills .skills h3 span{
+    color: var(--main-color);
 }
 
-.javascript{
-	width: 50%;
-	animation: javascript 2s;
+.technical_skills .skills .line{
+    height: 8px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    background: var(--second-bg-color);
 }
 
-.python{
-	width: 99%;
-	animation: python 2s;
+.technical_skills .skills .line::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 50%;
+    background: var(--main-color);
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.technical_skills .skills .HTML .line::after {
+    --width: 99%;
+    width: var(--width);
+    animation: fillBar 1.5s ease forwards;
+}
+.technical_skills .skills .CSS .line::after {
+    --width: 100%;
+    width: var(--width);
+    animation: fillBar 1.5s ease forwards;
+}
+.technical_skills .skills .Python .line::after {
+    --width: 90%;
+    width: var(--width);
+    animation: fillBar 1.5s ease forwards;
+}
+.technical_skills .skills .Javascript .line::after {
+    --width: 75%;
+    width: var(--width);
+    animation: fillBar 1.5s ease forwards;
+}
+.technical_skills .skills .React .line::after {
+    --width: 50%;
+    width: var(--width);
+    animation: fillBar 1.5s ease forwards;
+}
+
+
+.professional_skills{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+.professional_skills h3 {
+    margin-top: 60px;
+    font-size: 26px;
+    color: var(--font-color);
+    margin-bottom: 40px; /* reasonable space */
+}
+
+.professional_skills .boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    color: var(--font-color);
+    margin-bottom: 40px;
+    justify-items: center;
+}
+
+.professional_skills .boxes .box{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+
+.professional_skills .boxes .box span {
+    position: relative;
+    z-index: 2;
+    font-size: 13px;
+    text-align: center;
+}
+
+.box {
+  --progress: 0%;
+  --target: 90%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(var(--main-color) var(--progress), var(--second-bg-color) 0);
+  animation: smoothCircle 2s ease-out forwards;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.box span {
+  position: relative;
+  z-index: 2;
+  color: var(--font-color);
+  font-size: 13px;
+  text-align: center;
+}
+
+.soft-skills {
+  --target: 90%;
+  --progress: 0%;
+  animation: smoothCircle 2s ease-out forwards;
+  background: conic-gradient(var(--main-color) var(--progress), var(--second-bg-color) 0);
+}
+
+.problem-solving {
+  --target: 99%;
+  --progress: 0%;
+  animation: smoothCircle 2s ease-out forwards;
+  background: conic-gradient(var(--main-color) var(--progress), var(--second-bg-color) 0);
 }
 
 /* Cources Section */
@@ -420,10 +543,60 @@ li{
     background-color: var(--second-bg-color);
 }
 
-.Cources h1{
-    font-size: 7rem;
-    margin-top: 130px;
-    transform: rotate(-30deg);
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 60px;
+}
+
+.course{
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.5s, background 0.5s;
+}
+
+.course ion-icon{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+}
+
+.course h2{
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--black-color);
+}
+
+.course a{
+    text-decoration: none;
+    color: var(--font-color);
+    cursor: none;
+}
+
+.course:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: scale(1.05); 
+    cursor: none;
+}
+
+.course:hover ion-icon{
+    color: var(--bg-color);
+    cursor: none;
+}
+
+.course:hover p{
+    color: var(--bg-color);
+    cursor: none;
+}
+
+.course:hover h2{
+    color: var(--bg-color);
+    cursor: none;
 }
 
 /* Project Section */
@@ -767,6 +940,13 @@ footer .copyright{
     animation-delay: 1s;
 }
 
+/* Property's Section */
+@property --progress {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
 /* Animation Content */
 
 @keyframes updown{
@@ -805,17 +985,6 @@ footer .copyright{
     }
 }
 
-@keyframes right{
-    from{
-        transform: translateX(1000%);
-        scale: 0.5;
-    }
-    to{
-        transform: translateX(0);
-        scale: 1;
-    }
-}
-
 @keyframes goleft{
     from{
         transform: translateX(0);
@@ -823,16 +992,6 @@ footer .copyright{
 
     to{
         transform: translateX(10000%);
-    }
-}
-
-@keyframes goright{
-    from{
-        transform: translateX(0);
-    }
-
-    to{
-        transform: translateX(-10000%);
     }
 }
 
@@ -858,46 +1017,6 @@ footer .copyright{
     }
 }
 
-@keyframes html{
-	0%{
-		width: 0%;
-	}
-
-	100%{
-		width: 99%;
-	}
-}
-
-@keyframes css{
-	0%{
-		width: 0%;
-	}
-
-	100%{
-		width: 85%;
-	}
-}
-
-@keyframes javascript{
-	0%{
-		width: 0%;
-	}
-
-	100%{
-		width: 50%;
-	}
-}
-
-@keyframes python{
-	0%{
-		width: 0%;
-	}
-
-	100%{
-		width: 99%;
-	}
-}
-
 @keyframes push_401 {
     from {
       transform: translate(-50% , 0%)  scale(1)
@@ -906,6 +1025,36 @@ footer .copyright{
     to {
       transform: translate(-50%, -100%) scale(0)
     }
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--width);
+    }
+}
+
+@keyframes fillCircle {
+    0% {
+        background: conic-gradient(var(--main-color) 0%, var(--second-bg-color) 0);
+    }
+    100% {
+        background: conic-gradient(var(--main-color) var(--percent), var(--second-bg-color) 0);
+    }
+}
+
+@keyframes smoothCircle {
+  to {
+    --progress: var(--target);
+  }
+}
+
+@keyframes smoothCircle {
+  to {
+    --progress: var(--target);
+  }
 }
 
 /* Responsive */
@@ -991,6 +1140,37 @@ footer .copyright{
         font-size: 1.3rem;
     }
 
+    .skills_wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .technical_skills,
+  .professional_skills {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .professional_skills .boxes {
+    grid-template-columns: 1fr; /* stack boxes */
+    gap: 20px;
+  }
+
+  .professional_skills .boxes .box {
+    width: 150px;
+    height: 150px;
+  }
+
+  .professional_skills h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .technical_skills h3,
+  .technical_skills .head {
+    text-align: center;
+  }
 
 }
 
