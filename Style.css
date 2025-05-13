@@ -1,6 +1,6 @@
 /* Import Font */
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Share+Tech+Mono&display=swap');
 
 /* All Content */
 
@@ -12,6 +12,8 @@
     font-family: "Viga", sans-serif;
     font-weight: 500;
     scroll-behavior: smooth;
+    cursor: none;
+
 }
 
 *::selection{
@@ -61,26 +63,35 @@ li{
     /* Main */
     --white-color: #f7fafc;
 
-    /* Dark Mode */
-    --bg-color: #222831;
-    --second-bg-color: #2D3138;
-    --font-color: #f7fafc;
-    --second-font-color: #e2e8f0;
-    --main-color: #83B4FF;
-
-    /* Box Buttons */
-    --second-main-color: #ffbd44;
-    --green-color: #00ca4e;
-    --red-color: #ff605c;
-}
-
-/* Light Mode */
-.light-mode{
+    /* Light Mode */
     --bg-color: #f7fafc;
     --second-bg-color: #e2e8f0;
     --font-color: #5D5D5D;
     --second-font-color: #2D3138;
     --main-color: #93A3B3;
+
+    /* Box Buttons */
+    --second-main-color: #ffbd44;
+    --blue-color: #8DD8FF;
+    --red-color: #ff605c;
+}
+
+/* Dark Mode */
+.dark-mode{
+    --bg-color: #222831;
+    --second-bg-color: #2D3138;
+    --font-color: #f7fafc;
+    --second-font-color: #e2e8f0;
+    --main-color: #83B4FF;
+}
+
+/* Language Selection [ In Development :) ]*/
+.AR{
+    font-family: "Lalezar", sans-serif;
+}
+
+.EN{
+    font-family: "Viga", sans-serif;
 }
 
 /* Cursor */
@@ -258,6 +269,7 @@ li{
 
 .mode-switch ion-icon{
     font-size: 4rem;
+    transition: 0.5s ease;
 }
 
 #Moon{
@@ -291,7 +303,6 @@ li{
 
 .About-Content h2{
     font-size: 7rem;
-    text-align: left;
 }
 
 .About-Content .details{
@@ -556,6 +567,7 @@ li{
     font-size: 14px;
     cursor: pointer;
     background: transparent;
+    border: 3px solid var(--main-color);
     transition: transform 0.5s, background 0.5s;
 }
 
@@ -746,7 +758,7 @@ li{
 }
   
 .screen-header-button.maximize {
-    background: var(--green-color);
+    background: var(--blue-color);
 }
   
 .screen-header-button.minimize {
@@ -1065,6 +1077,10 @@ footer .copyright{
         position: fixed;
         right: 0;
         
+    }
+
+    .Main-header{
+        justify-content: space-between;
     }
 
     .Navigation-bar{
