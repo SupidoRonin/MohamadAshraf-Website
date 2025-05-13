@@ -12,7 +12,7 @@
     <title>Mohamad Ashraf - Website</title>
 </head>
 
-<body>
+<body  dir="ltr">
     <!-- Circular Cursor -->
      <div class="cursor" id="cursor">
         <div class="cursor-dot" id="dot"></div>
@@ -186,7 +186,7 @@
                     <a href="">
                         <ion-icon  name="code-slash"></ion-icon>
                         <h2>Web Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, corporis.</p>
+                        <p>Involves creating, building, and maintaining websites and web applications.</p>
                     </a>
                 </div>
 
@@ -194,7 +194,7 @@
                     <a href="">
                         <ion-icon name="logo-electron"></ion-icon>
                         <h2>Ai Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, corporis.</p>
+                        <p>The process of creating, training, and deploying artificial intelligence systems.</p>
                     </a>
                 </div>
 
@@ -202,7 +202,7 @@
                     <a href="">
                         <ion-icon name="game-controller"></ion-icon>
                         <h2>Game Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, corporis.</p>
+                        <p>the process of designing, creating, and releasing video games. It combines creativity, storytelling, programming, and design to build interactive experiences.</p>
                     </a>
                 </div>
 
@@ -210,7 +210,7 @@
                     <a href="">
                         <ion-icon name="brush"></ion-icon>
                         <h2>Design</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, corporis.</p>
+                        <p> broad discipline focused on creating solutions that are both functional and aesthetically pleasing.</p>
                     </a>
                 </div>
 
@@ -218,7 +218,7 @@
                     <a href="">
                         <ion-icon name="people"></ion-icon>
                         <h2>Training</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, corporis.</p>
+                        <p>the process of transferring knowledge, skills, or attitudes from one person to others with the goal of helping them.</p>
                     </a>
                 </div>
 
@@ -226,7 +226,7 @@
                     <a href="">
                         <ion-icon name="hardware-chip-outline"></ion-icon>
                         <h2>Hardware Development</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, corporis.</p>
+                        <p>the process of designing, building, testing, and producing physical electronic components and systems.</p>
                     </a>
                 </div>
         
@@ -377,7 +377,7 @@
     <script src="Script.js"></script>
 
     <!-- Javascript Save Mode System -->
-    <script type="text/javascript" src="lightmode.js" defer></script>
+    <script type="text/javascript" src="darkmode.js" defer></script>
 
     <!-- Typed Effect CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -410,14 +410,6 @@
           if (response.status == 200) {
               window.location.href = "success.html"
           }
-        }
-        
-        const response = await fetch('https://api.web3forms.com/submit', {
-           method: 'POST',
-           headers: {
-             'Content-Type': 'application/json',
-           },
-           body: JSON.stringify(data),
         });
     </script>
 
