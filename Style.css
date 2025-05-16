@@ -11,7 +11,6 @@
     text-decoration: none;
     font-family: "Viga", sans-serif;
     font-weight: 500;
-    scroll-behavior: smooth;
     cursor: none;
 
 }
@@ -24,8 +23,8 @@
 /* Document */
 
 html{
-    scroll-padding: 5rem;
     scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
     font-size: 40%;
 }
 
@@ -391,7 +390,6 @@ li{
     color: var(--font-color);
     width: 50%;
     margin-top: 40px;
-
 }
 
 .technical_skills .skills{
@@ -402,13 +400,15 @@ li{
 
 .technical_skills h3{
     font-size: 2.3rem;
-    width: 18%;
+    
 }
 
 .technical_skills .head{
     font-size: 26px;
     color: var(--font-color);
-    width: 34%;
+    min-width: 40%;
+    text-align: center;
+    
 }
 
 .technical_skills .skills h3 span{
@@ -474,7 +474,8 @@ li{
     font-size: 26px;
     color: var(--font-color);
     margin-bottom: 40px;
-    width: 40%;
+    min-width: 40%;
+    text-align: center;
 }
 
 .professional_skills .boxes {
@@ -488,8 +489,8 @@ li{
 
 .professional_skills .boxes .box{
     display: flex;
-    height: 200px;
-    width: 200px;
+    width: 170px;
+    height: 170px;
     flex-direction: column;
     align-items: center;
     position: relative;
@@ -1167,36 +1168,26 @@ footer .copyright{
     }
 
     .skills_wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
 
-  .technical_skills,
-  .professional_skills {
-    width: 90%;
-    margin-top: 20px;
-  }
+    .technical_skills,
+    .professional_skills {
+        width: 90%;
+        margin-top: 20px;
+    }
 
-  .professional_skills .boxes {
-    grid-template-columns: 1fr; /* stack boxes */
-    gap: 20px;
-  }
+    .professional_skills .boxes {
+        grid-template-columns: 1fr; /* stack boxes */
+        gap: 20px;
+    }
 
-  .professional_skills .boxes .box {
-    width: 150px;
-    height: 150px;
-  }
-
-  .professional_skills h3 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .technical_skills h3,
-  .technical_skills .head {
-    text-align: center;
-  }
+    .professional_skills .boxes .box {
+        width: 150px;
+        height: 150px;
+    }
 
 }
 
