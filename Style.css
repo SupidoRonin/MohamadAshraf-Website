@@ -149,7 +149,6 @@ li{
 #Menu-icon{
     font-size: 3.6rem;
     color: var(--main-color);
-    animation: goleft 0.7s;
     display: none;
 }
 
@@ -403,11 +402,13 @@ li{
 
 .technical_skills h3{
     font-size: 2.3rem;
+    width: 18%;
 }
 
 .technical_skills .head{
     font-size: 26px;
     color: var(--font-color);
+    width: 34%;
 }
 
 .technical_skills .skills h3 span{
@@ -469,10 +470,11 @@ li{
 }
 
 .professional_skills h3 {
-    margin-top: 60px;
+    margin-top: 40px;
     font-size: 26px;
     color: var(--font-color);
-    margin-bottom: 40px; /* reasonable space */
+    margin-bottom: 40px;
+    width: 40%;
 }
 
 .professional_skills .boxes {
@@ -689,7 +691,7 @@ li{
 
 .Project-Info p{
     color: var(--bg-color);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.7;
 }
@@ -814,6 +816,12 @@ li{
     margin-top: auto;
     font-size: 8px;
     color: #888;
+}
+
+.app-contact a{
+    color: var(--main-color);
+    font-size: 2rem;
+    line-height: 1.7;
 }
   
 .app-form-group {
@@ -1088,7 +1096,7 @@ footer .copyright{
         position: fixed;
         top: 100%;
         right: 0;
-        width: 35%;
+        width: 40%;
         padding: 1rem 3rem;
         background-color: var(--second-bg-color);
         border-left: 2px solid var(--main-color);
@@ -1097,7 +1105,8 @@ footer .copyright{
         backdrop-filter: blur(10px);
         align-items: center;
         justify-content: center;
-        animation: hummenu 0.7s ease;
+        display: none;
+        animation: hide 0.7s ease;
     }
 
     .Navigation-bar a{
@@ -1115,8 +1124,8 @@ footer .copyright{
     }
 
     .Navigation-bar.active{
-        animation: hide 0.7s ease;
-        display: none;
+        animation: hummenu 0.7s ease;
+        display: block;
     }
 
     .Home{
