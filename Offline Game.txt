@@ -1,0 +1,26 @@
+Javascript:-
+
+function showOfflineGame() {
+  document.getElementById('offline-game').style.display = 'block';
+  startGame(); // دالة تشغيل اللعبة
+}
+
+function hideOfflineGame() {
+  document.getElementById('offline-game').style.display = 'none';
+  stopGame(); // دالة إيقاف اللعبة لو حبيت
+}
+
+window.addEventListener('offline', () => {
+    showOfflineGame();
+});
+  
+  window.addEventListener('online', () => {
+    hideOfflineGame();
+});
+  
+Html:-
+
+<div id="offline-game" style="display: none;">
+  <!-- هنا اللعبة بتاعتك -->
+  <canvas id="game-canvas"></canvas>
+</div>

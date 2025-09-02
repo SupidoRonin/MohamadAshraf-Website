@@ -25,17 +25,18 @@
         <a href="#Home" class="Logo"> Mohamad <span>Ashraf.</span></a>
         
         <!-- HumBurger Menu Icon -->
-        <ion-icon name="menu" id="Menu-icon" class="Menu-icon"></ion-icon>
+        <div class="Menu-icon" id="Menu-icon">
+            <ion-icon name="menu" class="Menu"></ion-icon>
+        </div>
 
         <!-- Navigation Bar Menu -->
         <nav class="Navigation-bar">
             <a href="#Home" class="links">Home</a>
             <a href="#AboutMe" class="links">About Me</a>
             <a href="#Skills" class="links">Skills</a>
-            <a href="#Cources" class="links">My Cources</a>
+            <a href="#Courses" class="links">My Courses</a>
             <a href="#MyProjects" class="links">My Projects</a>
             <a href="#ContactMe" class="links">Contact Me</a>
-            
         </nav>
 
         <button id="mode-switch" class="mode-switch">
@@ -44,6 +45,8 @@
         </button>
 
     </header>
+
+    <div id="status" class="status-notification"></div>
 
     <!-- Home Section -->
     <section id="Home" class="Home">
@@ -84,7 +87,7 @@
     </section>
 
     <!-- About Me Section -->
-    <section class="AboutMe" id="AboutMe">
+    <section class="fade-in-section AboutMe" id="AboutMe">
         <!-- About Me Image -->
         <div class="About-Image">
             <img src="Images/Logo.jpg" alt="About Image">
@@ -112,9 +115,9 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="Skills" id="Skills">
+    <section class="fade-in-section Skills" id="Skills">
         <!-- Skills Heading -->
-        <h2 class="Heading">My <span>Skill's</span></h2>
+        <h2 class="Heading">My <span>Skills</span></h2>
 
         <div class="skills_wrapper">
             <div class="technical_skills"> <!-- Technical skills (Technology)-->
@@ -176,10 +179,10 @@
 
     </section>
 
-    <!-- My Cources Section -->
-    <section class="Cources" id="Cources">
-        <!-- Cources Heading -->
-        <h2 class="Heading">My <span>Cources</span></h2>
+    <!-- My Courses Section -->
+    <section class="fade-in-section Courses" id="Courses">
+        <!-- Courses Heading -->
+        <h2 class="Heading">My <span>Courses</span></h2>
 
         <div class="row">
                 <div class="course">
@@ -233,9 +236,9 @@
     </section>
 
     <!-- My Project Section -->
-    <section class="MyProjects" id="MyProjects">
+    <section class="fade-in-section MyProjects" id="MyProjects">
         <!-- Projects Heading -->
-        <h2 class="Heading">My <span>Project's</span></h2>
+        <h2 class="Heading">My <span>Projects</span></h2>
         
         <!-- Project Container -->
         <div class="Projects-Container">
@@ -273,7 +276,7 @@
     </section>
 
     <!-- Contact Me Section -->
-    <section class="ContactMe" id="ContactMe">
+    <section class="fade-in-section ContactMe" id="ContactMe">
         <!-- Contact Me Heading -->
         <h2 class="Heading">Contact <span>Me</span></h2>
 
@@ -379,16 +382,24 @@
     <!-- Javascript Get Link -->
     <script src="Script.js"></script>
 
+    <!-- Achievements System -->
+    <!--<script src="Achievements.js"></script>-->
+
     <!-- Javascript Save Mode System -->
     <script type="text/javascript" src="darkmode.js" defer></script>
 
     <!-- Typed Effect CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+    <!-- Hidden Message -->
+    <script>
+        console.log("👋 Hey nerd! You found the console easter egg. Are you spying on my bugs?");
+    </script>
+
     <!-- Type Effect Script -->
     <script>
         var typed = new Typed(".multiple-text",{
-            strings : ["Programmer", "Designer", "Trainer", "Web Developer", "Game Developer", "App Developer"],
+            strings : ["Programmer", "Designer", "Trainer", "Fullstack Developer", "App Developer", "Game Developer"],
             typeSpeed : 150,
             backSpeed : 150,
             loop : true
@@ -415,6 +426,25 @@
           }
         });
     </script>
+
+    <!-- Title Easter Egg -->
+    <script>
+        const originalTitle = document.title;
+        let timeoutID;
+
+        document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+            document.title = "Hey Where Are You??";
+            clearTimeout(timeoutID); // Cancel any previous timers
+            } else {
+            document.title = "Welcome Back!";
+            timeoutID = setTimeout(() => {
+                document.title = originalTitle;
+            }, 3000); // 3 seconds delay
+            }
+        });
+    </script>
+
 
 </body>
 </html>

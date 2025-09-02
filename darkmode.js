@@ -8,7 +8,6 @@ const enableDarkmode = () => {
     localStorage.setItem('dark-mode', 'active')
     moon.style.display = 'block'
     sun.style.display = 'none'
-
 }
 
 const disableDarkmode = () => {
