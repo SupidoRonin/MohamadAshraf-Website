@@ -280,59 +280,92 @@
         <!-- Contact Me Heading -->
         <h2 class="Heading">Contact <span>Me</span></h2>
 
-        <!-- Contact Me Box -->
-        <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+        <!-- Contact Container-->
+        <div class="contact-container">
+
+            <!-- Left side contact info -->
+            <div class="contact-details">
+            <a href="tel:01019976730" class="contact-item">
+                <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
+                <div class="text">
+                <strong>Phone Number</strong><br>
+                <span>01019976730</span>
+                </div>
+            </a>
+
+            <a href="mailto:mohamadanime012@gmail.com" class="contact-item">
+                <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
+                <div class="text">
+                <strong>Email</strong><br>
+                <span>mohamadanime012@gmail.com</span>
+                </div>
+            </a>
+
+            <a href="" target="_blank" class="contact-item">
+                <div class="icon"><ion-icon name="remove-outline"></ion-icon></div>
+                <div class="text">
+                <strong>Coming Soon</strong><br>
+                <span>Example</span>
+                </div>
+            </a>
+
+            <a href="" target="_blank" class="contact-item">
+                <div class="icon"><ion-icon name="remove-outline"></ion-icon></div>
+                <div class="text">
+                <strong>Coming Soon</strong><br>
+                <span>Example</span>
+                </div>
+            </a>
+            </div>
+
+            <!-- Right side contact form -->
+            <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
             <input type="hidden" name="access_key" value="507c8d6b-a152-4ab9-a22b-2fde590d1c54">
-            
             <div class="container">
-              <div class="screen">
+                <div class="screen">
                 <div class="screen-header">
-                  <div class="screen-header-left">
+                    <div class="screen-header-left">
                     <div class="screen-header-button close"></div>
                     <div class="screen-header-button maximize"></div>
                     <div class="screen-header-button minimize"></div>
-                  </div>
-                  <div class="screen-header-right">
+                    </div>
+                    <div class="screen-header-right">
                     <div class="screen-header-ellipsis"></div>
                     <div class="screen-header-ellipsis"></div>
                     <div class="screen-header-ellipsis"></div>
-                  </div>
+                    </div>
                 </div>
                 <div class="screen-body">
-                  <div class="screen-body-item left">
+                    <div class="screen-body-item left">
                     <div class="app-title">
-                      <span id="outline">Contact Me</span>
+                        <span id="outline">Contact Me</span>
                     </div>
-                    <div class="app-contact">
-                        <a href="mailto:mohamadanime012@gmail.com">Email: mohamadanime012@gmail.com</a><br>
-                        <a href="tel:+201019976730">Phone Number: 01019976730</a>
                     </div>
-                  </div>
-                  <div class="screen-body-item">
+                    <div class="screen-body-item">
                     <div class="app-form">
-                      <div class="app-form-group">
-                        <!--<ion-icon name="person"></ion-icon>--><input class="app-form-control" placeholder="Name" type="text" name="name" id="name" required>
-                      </div>
-                      <div class="app-form-group">
-                        <!--<ion-icon name="mail"></ion-icon>--><input class="app-form-control" placeholder="Email" type="email" name="email" id="email" required>
-                      </div>
-                      <div class="app-form-group">
-                        <!--<ion-icon name="call"></ion-icon>--><input class="app-form-control" placeholder="Phone Number" type="tel" maxlength="11" minlength="11" name="phone-number" id="phone" required>
-                      </div>
-                      <div class="app-form-group message">
-                       <!--<ion-icon name="send"></ion-icon>--><input class="app-form-control" placeholder="Message" type="text" name="message" id="message" class="message" required>
-                      </div>
-
-                      <div class="app-form-group buttons">
+                        <div class="app-form-group">
+                        <input class="app-form-control" placeholder="Name" type="text" name="name" id="name" required>
+                        </div>
+                        <div class="app-form-group">
+                        <input class="app-form-control" placeholder="Email" type="email" name="email" id="email" required>
+                        </div>
+                        <div class="app-form-group">
+                        <input class="app-form-control" placeholder="Phone Number" type="tel" maxlength="11" minlength="11" name="phone-number" id="phone" required>
+                        </div>
+                        <div class="app-form-group message">
+                        <input class="app-form-control" placeholder="Message" type="text" name="message" id="message" required>
+                        </div>
+                        <div class="app-form-group buttons">
                         <button class="app-form-button" type="reset">Cancel</button>
                         <button class="app-form-button" type="submit">Send</button>
-                      </div>
+                        </div>
                     </div>
-                  </div>
+                    </div>
                 </div>
-              </div>
+                </div>
             </div>
-        </form>
+            </form>
+        </div>
 
     </section>
 
