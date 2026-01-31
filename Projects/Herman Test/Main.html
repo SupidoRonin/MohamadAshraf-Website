@@ -1,1 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Herman Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css" />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Home Section -->
+    <section class="Page Active" id="Home">
+      <div class="Content-Wrapper">
+        <h1>Herman Test</h1>
+        <p class="Subtitle">Discover Your Personality Type</p>
+        <div class="Buttons-Group">
+          <button class="Button-Primary" onclick="startTest()">
+            Start Test
+          </button>
+          <button class="Button-Secondary" onclick="openAdmin()">
+            Admin Panel
+          </button>
+        </div>
 
+        <h3 class="Title">Made By: Onyx</h3>
+      </div>
+    </section>
+
+    <!-- Test Section -->
+    <section class="Page" id="Test">
+      <div class="Content-Wrapper">
+        <div class="Progress"><div id="Progress-Bar"></div></div>
+
+        <div id="Type"></div>
+        <h2 id="Question"></h2>
+
+        <div class="Answers">
+          <button id="Yes-Btn" onclick="answer(true)">Yes</button>
+          <button id="No-Btn" onclick="answer(false)">No</button>
+        </div>
+
+        <div class="Nav">
+          <button onclick="prev()">Previous</button>
+          <button onclick="next()">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Result Section -->
+    <section class="Page" id="Result">
+      <div class="Content-Wrapper">
+        <h1>Your Result</h1>
+
+        <!-- Dominant Nav -->
+        <div class="Result-Nav" id="Result-Nav"></div>
+
+        <!-- Explanation -->
+        <p id="Result-Text"></p>
+
+        <!-- Scores Display -->
+        <div class="Scores-Container">
+          <div class="Score-Item">
+            <div class="Score-Label">Type A</div>
+            <div class="Score-Value" id="Score-A">0</div>
+          </div>
+          <div class="Score-Item">
+            <div class="Score-Label">Type B</div>
+            <div class="Score-Value" id="Score-B">0</div>
+          </div>
+          <div class="Score-Item">
+            <div class="Score-Label">Type C</div>
+            <div class="Score-Value" id="Score-C">0</div>
+          </div>
+          <div class="Score-Item">
+            <div class="Score-Label">Type D</div>
+            <div class="Score-Value" id="Score-D">0</div>
+          </div>
+        </div>
+
+        <button class="Button-Primary" onclick="restart()">Restart</button>
+      </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section class="Page" id="Admin">
+      <div class="Content-Wrapper">
+        <h1>Admin Panel</h1>
+
+        <div class="Admin-Form">
+          <input id="Q-Text" placeholder="Question text" />
+          <select id="Q-Type">
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+          </select>
+          <button class="Button-Primary" onclick="addQuestion()">Add</button>
+        </div>
+
+        <ul id="Question-List"></ul>
+
+        <button class="Button-Secondary" onclick="goHome()">Back</button>
+      </div>
+    </section>
+
+    <!-- Password Modal -->
+    <div class="Modal" id="Password-Modal">
+      <div class="Modal-Content">
+        <h2>Admin Access</h2>
+        <p class="Modal-Subtitle">Enter your credentials to continue</p>
+        <input type="text" id="Admin-Id" placeholder="Enter Admin ID" />
+        <input
+          type="password"
+          id="Password-Input"
+          placeholder="Enter password"
+        />
+        <p class="Error-Message" id="Error-Message"></p>
+        <div class="Modal-Buttons">
+          <button class="Button-Secondary" onclick="closePasswordModal()">
+            Cancel
+          </button>
+          <button class="Button-Primary" onclick="verifyPassword()">
+            Enter
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FireBase SDK-->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+    <!-- Javascript -->
+    <script src="Script.js"></script>
+  </body>
+</html>

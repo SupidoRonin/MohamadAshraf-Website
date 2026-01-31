@@ -1,0 +1,604 @@
+/* Library ---------------------------------------------------------------------------*/
+/* Colors Variables */
+:root {
+  --bg-dark: #0a0a0a;
+  --bg-card: #1a1a1a;
+  --primary: #00d4ff;
+  --primary-glow: rgba(0, 212, 255, 0.2);
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --border: #2a2a2a;
+}
+
+/* Document Setup ------------------------------------------------------------------ */
+/* All Elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Document Body */
+body {
+  background: var(--bg-dark);
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: var(--text-primary);
+}
+
+h1 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin: 20px 0;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.Subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+button {
+  padding: 12px 28px;
+  margin: 8px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: var(--primary);
+}
+
+button:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.Button-Primary {
+  background: var(--primary);
+  color: var(--bg-dark);
+}
+
+.Button-Primary:hover {
+  background: transparent;
+  color: var(--primary);
+}
+
+.Button-Secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 12px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+li:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* Website -----------------------------------------------------------------------------------*/
+/* Pages Styles */
+.Page {
+  display: none;
+  background: var(--bg-card);
+  padding: 0;
+  width: 100%;
+  max-width: 900px; /* allow wider layout on larger screens */
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--border);
+  animation: fadeIn 0.5s ease;
+  margin: 0 16px; /* small horizontal gutter on very small screens */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active Page */
+.Page.Active {
+  display: block;
+}
+
+.Content-Wrapper {
+  padding: 40px 35px;
+}
+
+/* Button Group */
+.Buttons-Group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.Buttons-Group button {
+  width: 100%;
+  margin: 0;
+}
+
+.Title {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Answers Styles */
+.Answers {
+  margin: 30px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.Answers button {
+  width: 140px;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+/* Active Answer */
+.Answers button.Active {
+  background: var(--primary);
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Progress Bar Styles */
+.Progress {
+  height: 10px;
+  background: var(--bg-dark);
+  border-radius: 20px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* Progress Bar Fill */
+#Progress-Bar {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* Results Styles */
+#Type {
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--primary);
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  background: var(--bg-dark);
+  border-radius: 8px;
+  display: inline-block;
+  border: 1px solid var(--border);
+}
+
+#Result-Text {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  padding: 20px;
+  background: var(--bg-dark);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Result Navigation Buttons */
+.Result-Nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* Result Navigation Button Styles */
+.Result-Nav button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  min-width: 60px;
+}
+
+/* Active Result Navigation Button */
+.Result-Nav button.Active {
+  background: var(--primary);
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Chart Container */
+.chart-container {
+  margin: 30px 0;
+  padding: 20px;
+  background: var(--bg-dark);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+/* Scores Container */
+.Scores-Container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+  padding: 20px;
+  background: var(--bg-dark);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.Score-Item {
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.Score-Item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.Score-Label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.Score-Value {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Navigation Buttons */
+.Nav {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.Nav button {
+  flex: 1;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.Nav button:hover {
+  background: var(--primary);
+  color: var(--bg-dark);
+}
+
+/* Admin Panel Styles */
+.Admin-Form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.Admin-Form input,
+.Admin-Form select {
+  padding: 14px 18px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+.Admin-Form input:focus,
+.Admin-Form select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.Admin-Form input::placeholder {
+  color: var(--text-secondary);
+}
+
+#Question-List {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 20px 0;
+  padding-right: 10px;
+}
+
+#Question-List::-webkit-scrollbar {
+  width: 6px;
+}
+
+#Question-List::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+  border-radius: 10px;
+}
+
+#Question-List::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+#Question-List li button {
+  background: #ff4444;
+  color: var(--text-primary);
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  min-width: auto;
+  border: none;
+}
+
+#Question-List li button:hover {
+  background: #cc0000;
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.3);
+}
+
+/* Responsive Design */
+/* Responsive: Small (phones) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .Content-Wrapper {
+    padding: 20px 18px;
+  }
+  .Buttons-Group {
+    gap: 10px;
+  }
+
+  .Answers {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Answers button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .Scores-Container {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+  .Score-Item {
+    padding: 14px;
+  }
+
+  .Result-Nav {
+    gap: 8px;
+  }
+  #Result-Text {
+    padding: 14px;
+  }
+}
+
+/* Responsive: Medium (tablets) */
+@media (min-width: 601px) and (max-width: 899px) {
+  h1 {
+    font-size: clamp(2rem, 3.6vw, 2.4rem);
+  }
+  h2 {
+    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  }
+
+  .Content-Wrapper {
+    padding: 30px 30px;
+  }
+  .Buttons-Group {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .Buttons-Group button {
+    width: auto;
+  }
+
+  .Answers {
+    gap: 16px;
+  }
+  .Answers button {
+    width: 160px;
+  }
+
+  .Scores-Container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Score-Item {
+    padding: 18px;
+  }
+}
+
+/* Responsive: Large (desktops) */
+@media (min-width: 900px) {
+  .Content-Wrapper {
+    padding: 48px 48px;
+  }
+
+  .Buttons-Group {
+    flex-direction: row;
+    gap: 18px;
+    align-items: center;
+    justify-content: center;
+  }
+  .Buttons-Group button {
+    width: auto;
+    padding: 12px 32px;
+  }
+
+  .Answers {
+    gap: 20px;
+  }
+  .Answers button {
+    width: 160px;
+  }
+
+  .Scores-Container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Score-Item {
+    padding: 28px;
+  }
+
+  .Nav {
+    gap: 20px;
+  }
+  .Page {
+    max-width: 1100px;
+  }
+}
+
+/* Password Modal */
+.Modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.Modal.Active {
+  display: flex;
+}
+
+.Modal-Content {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Modal-Content h2 {
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.Modal-Subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.Modal-Content input[type="text"],
+.Modal-Content input[type="password"] {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.Modal-Content input[type="text"]:focus,
+.Modal-Content input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.Error-Message {
+  color: #ff4444;
+  font-size: 0.9rem;
+  min-height: 20px;
+  margin-bottom: 15px;
+}
+
+.Modal-Buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Modal-Buttons button {
+  flex: 1;
+  margin: 0;
+}
