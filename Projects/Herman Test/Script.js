@@ -115,8 +115,7 @@ function verifyPassword() {
   // Admin credentials - You can add multiple admins here
   const adminCredentials = {
     Onyx: "Nyxobs16",
-    admin2: "mypass456",
-    superadmin: "admin123",
+    Nahla: "Nahla123",
   };
 
   // Check if ID exists and password matches

@@ -1,13 +1,13 @@
 /* Library ---------------------------------------------------------------------------*/
 /* Colors Variables */
 :root {
-  --bg-dark: #0a0a0a;
-  --bg-card: #1a1a1a;
-  --primary: #00d4ff;
-  --primary-glow: rgba(0, 212, 255, 0.2);
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --border: #2a2a2a;
+  --bg-color: #FAF7EE;           /* Lighter Ivory Beige for main background */
+  --second-bg-color: #EDE8D5;    /* Slightly darker beige for cards/sections */
+  --font-color: #827463;         /* Mushroom Beige for text */
+  --second-font-color: #2D3138;  /* Dark neutral for headings/text */
+  --main-color: #C9B89A;
+  --red: #662222;
+  --black: #2D3138;
 }
 
 /* Document Setup ------------------------------------------------------------------ */
@@ -18,29 +18,35 @@
   padding: 0;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  user-select: none;
+  color: var(--font-color);
 }
 
 /* Document Body */
 body {
-  background: var(--bg-dark);
+  background: var(--bg-color);
   font-family: "Arial", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  color: var(--text-primary);
+  color: var(--font-color);
 }
 
 h1 {
-  color: var(--text-primary);
+  color: var(--second-font-color);
   margin-bottom: 10px;
   font-size: 2.5rem;
   font-weight: 700;
 }
 
 h2 {
-  color: var(--text-primary);
+  color: var(--second-font-color);
   font-size: 1.5rem;
   margin: 20px 0;
   font-weight: 600;
@@ -48,7 +54,7 @@ h2 {
 }
 
 .Subtitle {
-  color: var(--text-secondary);
+  color: var(--font-color);
   font-size: 1.1rem;
   margin-bottom: 30px;
   font-weight: 400;
@@ -57,7 +63,7 @@ h2 {
 button {
   padding: 12px 28px;
   margin: 8px;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--main-color);
   border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
@@ -68,25 +74,25 @@ button {
 }
 
 button:hover {
-  background: var(--primary);
-  color: var(--bg-dark);
-  box-shadow: 0 0 20px var(--primary-glow);
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--main-color-glow);
 }
 
 .Button-Primary {
-  background: var(--primary);
-  color: var(--bg-dark);
+  background: var(--main-color);
+  color: var(--bg-color);
 }
 
 .Button-Primary:hover {
   background: transparent;
-  color: var(--primary);
+  color: var(--main-color);
 }
 
 .Button-Secondary {
   background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
 }
 
 ul {
@@ -97,26 +103,26 @@ ul {
 li {
   margin: 10px 0;
   padding: 12px;
-  background: var(--bg-card);
+  background: var(--second-bg-color);
   border-radius: 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
-  color: var(--text-primary);
+  color: var(--font-color);
 }
 
 li:hover {
-  border-color: var(--primary);
-  box-shadow: 0 0 15px var(--primary-glow);
+  border-color: var(--main-color);
+  box-shadow: 0 0 15px var(--main-color-glow);
 }
 
 /* Website -----------------------------------------------------------------------------------*/
 /* Pages Styles */
 .Page {
   display: none;
-  background: var(--bg-card);
+  background: var(--second-bg-color);
   padding: 0;
   width: 100%;
   max-width: 900px; /* allow wider layout on larger screens */
@@ -163,7 +169,7 @@ li:hover {
 .Title {
   margin-top: 40px;
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--font-color);
   font-weight: 400;
 }
 
@@ -178,15 +184,15 @@ li:hover {
 .Answers button {
   width: 140px;
   background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
 }
 
 /* Active Answer */
 .Answers button.Active {
-  background: var(--primary);
-  color: var(--bg-dark);
-  box-shadow: 0 0 20px var(--primary-glow);
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--main-color-glow);
 }
 
 /* Progress Bar Styles */
@@ -196,17 +202,17 @@ li:hover {
   border-radius: 20px;
   margin-bottom: 25px;
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main-color);
 }
 
 /* Progress Bar Fill */
 #Progress-Bar {
   height: 100%;
   width: 0%;
-  background: var(--primary);
+  background: var(--main-color);
   border-radius: 20px;
   transition: width 0.4s ease;
-  box-shadow: 0 0 10px var(--primary-glow);
+  box-shadow: 0 0 10px var(--main-color-glow);
 }
 
 /* Results Styles */
@@ -216,21 +222,21 @@ li:hover {
   color: var(--primary);
   font-size: 1.1rem;
   padding: 8px 16px;
-  background: var(--bg-dark);
+  background: var(--bg-color);
   border-radius: 8px;
   display: inline-block;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main-color);
 }
 
 #Result-Text {
-  color: var(--text-secondary);
+  color: var(--font-color);
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 20px 0;
   padding: 20px;
-  background: var(--bg-dark);
+  background: var(--second-bg-color);
   border-radius: 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main-color);
 }
 
 /* Result Navigation Buttons */
@@ -246,9 +252,9 @@ li:hover {
 .Result-Nav button {
   padding: 10px 20px;
   border-radius: 8px;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--main-color);
   background: transparent;
-  color: var(--primary);
+  color: var(--main-color);
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
@@ -257,18 +263,18 @@ li:hover {
 
 /* Active Result Navigation Button */
 .Result-Nav button.Active {
-  background: var(--primary);
-  color: var(--bg-dark);
-  box-shadow: 0 0 20px var(--primary-glow);
+  background: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--main-color-glow);
 }
 
 /* Chart Container */
 .chart-container {
   margin: 30px 0;
   padding: 20px;
-  background: var(--bg-dark);
+  background: var(--second-bg-color);
   border-radius: 16px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main-color);
 }
 
 /* Scores Container */
@@ -278,35 +284,35 @@ li:hover {
   gap: 15px;
   margin: 30px 0;
   padding: 20px;
-  background: var(--bg-dark);
+  background: var(--bg-color);
   border-radius: 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main-color);
 }
 
 .Score-Item {
   padding: 20px;
-  background: var(--bg-card);
+  background: var(--second-bg-color);
   border-radius: 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main-color);
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .Score-Item:hover {
-  border-color: var(--primary);
-  box-shadow: 0 0 15px var(--primary-glow);
+  border-color: var(--main-color);
+  box-shadow: 0 0 15px var(--main-color-glow);
 }
 
 .Score-Label {
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--font-color);
   margin-bottom: 8px;
   font-weight: 500;
 }
 
 .Score-Value {
   font-size: 2rem;
-  color: var(--primary);
+  color: var(--main-color);
   font-weight: 700;
 }
 
@@ -321,13 +327,13 @@ li:hover {
 .Nav button {
   flex: 1;
   background: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
 }
 
 .Nav button:hover {
-  background: var(--primary);
-  color: var(--bg-dark);
+  background: var(--main-color);
+  color: var(--bg-color);
 }
 
 /* Admin Panel Styles */
@@ -341,23 +347,23 @@ li:hover {
 .Admin-Form input,
 .Admin-Form select {
   padding: 14px 18px;
-  border: 2px solid var(--border);
+  border: 2px solid var(--main-color);
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: var(--bg-dark);
-  color: var(--text-primary);
+  background: var(--second-bg-color);
+  color: var(--font-color);
 }
 
 .Admin-Form input:focus,
 .Admin-Form select:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 15px var(--primary-glow);
+  border-color: var(--main-color);
+  box-shadow: 0 0 15px var(--main-color-glow);
 }
 
 .Admin-Form input::placeholder {
-  color: var(--text-secondary);
+  color: var(--font-color);
 }
 
 #Question-List {
@@ -372,18 +378,18 @@ li:hover {
 }
 
 #Question-List::-webkit-scrollbar-track {
-  background: var(--bg-dark);
+  background: var(--second-bg-color);
   border-radius: 10px;
 }
 
 #Question-List::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: var(--main-color);
   border-radius: 10px;
 }
 
 #Question-List li button {
   background: #ff4444;
-  color: var(--text-primary);
+  color: var(--font-color);
   padding: 6px 12px;
   font-size: 0.9rem;
   min-width: auto;
@@ -519,7 +525,7 @@ li:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--black);
   backdrop-filter: blur(5px);
   z-index: 1000;
   justify-content: center;
@@ -532,10 +538,10 @@ li:hover {
 }
 
 .Modal-Content {
-  background: var(--bg-card);
+  background: var(--bg-color);
   padding: 40px;
   border-radius: 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--main-color);
   max-width: 400px;
   width: 90%;
   text-align: center;
@@ -555,11 +561,11 @@ li:hover {
 
 .Modal-Content h2 {
   margin-bottom: 10px;
-  color: var(--text-primary);
+  color: var(--font-color);
 }
 
 .Modal-Subtitle {
-  color: var(--text-secondary);
+  color: var(--font-color);
   margin-bottom: 25px;
   font-size: 0.95rem;
 }
@@ -568,11 +574,11 @@ li:hover {
 .Modal-Content input[type="password"] {
   width: 100%;
   padding: 14px 18px;
-  border: 2px solid var(--border);
+  border: 2px solid var(--main-color);
   border-radius: 8px;
   font-size: 1rem;
-  background: var(--bg-dark);
-  color: var(--text-primary);
+  background: var(--second-bg-color);
+  color: var(--font-color);
   margin-bottom: 12px;
   transition: all 0.3s ease;
 }
@@ -580,12 +586,12 @@ li:hover {
 .Modal-Content input[type="text"]:focus,
 .Modal-Content input[type="password"]:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 15px var(--primary-glow);
+  border-color: var(--main-color);
+  box-shadow: 0 0 15px var(--main-color-glow);
 }
 
 .Error-Message {
-  color: #ff4444;
+  color: var(--red);
   font-size: 0.9rem;
   min-height: 20px;
   margin-bottom: 15px;

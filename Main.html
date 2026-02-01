@@ -6,46 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Get CSS Link -->
     <link rel="stylesheet" href="Style.css">
+    <!-- Get CSS Animation Link -->
+    <link rel="stylesheet" href="language-animation-styles.css">
     <!-- Website Icon -->
-    <link rel="icon" href="Images/Logo.jpg">
+    <link rel="icon" href="Images/Logo.jpeg">
     <!-- Website Name -->
-    <title>Mohamad Ashraf - Website</title>
+    <title data-i18n="web-title">Onyx - Website</title>
 </head>
 
-<body  dir="ltr">
+<body dir="ltr">
     <!-- Circular Cursor -->
-     <div class="cursor" id="cursor">
+    <div class="cursor" id="cursor">
+        <!-- Cursor Dot -->
         <div class="cursor-dot" id="dot"></div>
+        <!-- Cursor Circular Outline-->
         <div class="cursor-outline" id="outline"></div>
-     </div>
+    </div>
 
     <!-- Header -->
     <header class="Main-header">
         <!-- Header Logo -->
-        <a href="#Home" class="Logo"> Mohamad <span>Ashraf.</span></a>
-        
-        <!-- HumBurger Menu Icon -->
-        <div class="Menu-icon" id="Menu-icon">
-            <ion-icon name="menu" class="Menu"></ion-icon>
-        </div>
+        <a data-i18n="logo" href="#Home" class="Logo" > Onyx <span>Pulse.</span></a>
 
         <!-- Navigation Bar Menu -->
         <nav class="Navigation-bar">
-            <a href="#Home" class="links">Home</a>
-            <a href="#AboutMe" class="links">About Me</a>
-            <a href="#Skills" class="links">Skills</a>
-            <a href="#Courses" class="links">My Courses</a>
-            <a href="#MyProjects" class="links">My Projects</a>
-            <a href="#ContactMe" class="links">Contact Me</a>
+            <a data-i18n="home-link" href="#Home" class="links">Home</a>
+            <a data-i18n="about-link" href="#AboutMe" class="links">About Me</a>
+            <a data-i18n="skills-link" href="#Skills" class="links">Skills</a>
+            <a data-i18n="courses-link" href="#Courses" class="links">My Courses</a>
+            <a data-i18n="projects-link" href="#MyProjects" class="links">My Projects</a>
+            <a data-i18n="contact-link" href="#ContactMe" class="links">Contact Me</a>
         </nav>
 
-        <button id="mode-switch" class="mode-switch">
-            <ion-icon name="sunny-outline" id="Sun"></ion-icon>
-            <ion-icon name="moon" id="Moon"></ion-icon>
-        </button>
+        <!-- Theme Button & Humburger Menu Button -->
+        <div class="TBAHBB">
+            <!-- Language Button -->
+            <button id="lan-btn" class="lan-btn" data-key="lang-btn">
+                <ion-icon name="globe-outline"></ion-icon>
+            </button>
+
+            <!-- Dark & Light Mode Switch Button -->
+            <button id="mode-switch" class="mode-switch">
+                <ion-icon name="sunny-outline" id="Sun"></ion-icon>
+                <ion-icon name="moon" id="Moon"></ion-icon>
+            </button>
+
+            <!-- HumBurger Menu Icon -->
+            <div class="Menu-icon" id="Menu-icon">
+                <ion-icon name="menu" class="Menu"></ion-icon>
+            </div>
+        </div>
 
     </header>
 
+    <!-- Connection Status Notification -->
     <div id="status" class="status-notification"></div>
 
     <!-- Home Section -->
@@ -54,34 +68,34 @@
         <div class="Home-Content">
 
             <!-- Home Heading -->
-            <h1 id="outline">Hey, Here is <span id="outline">Mohamad Ashraf.</span></h1>
+            <h1 data-i18n="title" id="outline">Hey, Here is <span id="outline">Onyx</span></h1>
             <!-- Multiple Text -->
-            <h3 id="outline"><span id="outline" class="multiple-text"></span></h3>
+            <h3 data-i18n="description" id="outline"><span id="outline" class="multiple-text"></span></h3>
             <!-- Home Paragraph -->
             <!-- <p id="outline">Programmer & <span id="outline">Trainer</span>, Game <span id="outline">Developer</span>, Web & App <span id="outline">Developer</span></p> -->
             
             <!-- My Social Media Links -->
             <div class="Social-Icons">
-                
                 <a href="https://github.com/SupidoRonin"><ion-icon name="logo-github"></ion-icon></a>
                 <a href="https://www.instagram.com/notmohamadashraf/"><ion-icon name="logo-instagram"></ion-icon></a>
                 <a href="https://www.facebook.com/profile.php?id=61574784009131"><ion-icon name="logo-facebook"></ion-icon></a>
                 <a href="https://wa.me/01019976730"><ion-icon name="logo-whatsapp"></ion-icon></a>
                 <a href="https://dribbble.com/devmohamadashraf"><ion-icon name="logo-dribbble"></ion-icon></a>
-            
             </div>
 
             <!-- Home Button Group -->
             <div class="Button-Group">
-                <a href="#AboutMe" class="About-Button">More About Me</a>
-                <a href="#ContactMe" class="Contact-Button">Let's get in touch</a>
+                <!-- About Me Section Button -->
+                <a data-i18n="about-button" href="#AboutMe" class="About-Button">More About Me</a>
+                <!-- Contact Me Section Button -->
+                <a data-i18n="contact-button" href="#ContactMe" class="Contact-Button">Let's get in touch</a>
             </div>
         
         </div>
 
         <!-- Home Image -->
         <div class="Home-Image">
-            <img src="Images/Logo.jpg" alt="Home Image" id="Home-Image">
+            <img src="Images/Logo.jpeg" alt="Home Image" id="Home-Image">
         </div>
 
     </section>
@@ -90,24 +104,22 @@
     <section class="fade-in-section AboutMe" id="AboutMe">
         <!-- About Me Image -->
         <div class="About-Image">
-            <img src="Images/Logo.jpg" alt="About Image">
+            <img src="Images/Logo.jpeg" alt="About Image">
         </div>
 
         <!-- About Me Content -->
         <div class="About-Content">
-            <h2>About <span>Me</span></h2>
-            <h3 class="details" id="outline">Details: </h3>
+            <h2 data-i18n="about-heading" class="section-title">About <span>Me</span></h2>
+            <h3 data-i18n="about-details" class="details" id="outline">Details: </h3>
             <br>
-            <p id="outline">
-                <span id="outline">Name:</span> Mohamad Ashraf Ahmad.
-                <br>
-                <span id="outline">Age & Birth:</span> 15, 2009 / <span>September</span> / 03.
-                <br>
-                <span id="outline">Location:</span> El Zahraa, <span>Dokki</span>, Giza, <span>Egypt</span>.
-            </p>
+            <p data-i18n="name" id="outline"><span id="outline">Name:</span> Mohamad Ashraf Ahmad.</p>
+            <br>
+            <p data-i18n="age-birth" id="outline"><span id="outline">Age & Birth:</span> 15, 2009 / <span>September</span> / 03.</p>
+            <br>
+            <p data-i18n="location" id="outline"><span id="outline">Location:</span> El Zahraa, <span>Dokki</span>, Giza, <span>Egypt</span>.</p>
 
             <!-- Contact Me Button -->
-            <a href="#ContactMe" class="Contact">Let's get in touch</a>
+            <a data-i18n="contact-button" href="#ContactMe" class="Contact">Let's get in touch</a>
 
             
         </div>
@@ -117,11 +129,11 @@
     <!-- Skills Section -->
     <section class="fade-in-section Skills" id="Skills">
         <!-- Skills Heading -->
-        <h2 class="Heading">My <span>Skills</span></h2>
+        <h2 data-i18n="skills-heading" class="section-title Heading">My <span>Skills</span></h2>
 
         <div class="skills_wrapper">
             <div class="technical_skills"> <!-- Technical skills (Technology)-->
-                <h3 class="head" id="outline">Technical Skills</h3>
+                <h3 data-i18n="technical-skills-heading" class="head" id="outline">Technical Skills</h3>
                 <!-- Skills Content -->
                 <div class="skills">
                     <div class="skill_name HTML"> <!-- Skill Bar ( Html )-->
@@ -152,25 +164,25 @@
             </div>
 
             <div class="professional_skills"> <!-- Professional skills-->
-                <h3 id="outline">Professional Skills</h3>
+                <h3 data-i18n="professional-skills-heading" id="outline">Professional Skills</h3>
                 <div class="boxes">
                     <div class="box soft-skills"> <!-- Skill Ring ( SofSkills )-->
-                        <span id="outline">80%</span> <span id="outline">Soft Skills</span>
+                        <span id="outline">80%</span> <span data-i18n="soft-skills-heading" id="outline">Soft Skills</span>
                                 <div class="ring"></div>
                     </div>
 
                     <div class="box problem-solving">
-                        <span id="outline">99%</span> <span id="outline">Problem Solving</span>
+                        <span id="outline">99%</span> <span data-i18n="problem-solving-heading" id="outline">Problem Solving</span>
                                 <div class="ring"></div>
                     </div>
 
                     <div class="box">
-                        <span id="outline">75%</span> <span id="outline">Time Management</span>
+                        <span id="outline">75%</span> <span data-i18n="time-management-heading" id="outline">Time Management</span>
                                 <div class="ring"></div>
                     </div>
 
                     <div class="box">
-                        <span id="outline">90%</span> <span id="outline">Team Management</span>
+                        <span id="outline">90%</span> <span data-i18n="team-management-heading" id="outline">Team Management</span>
                                 <div class="ring"></div>
                     </div>
                 </div>
@@ -180,65 +192,65 @@
     </section>
 
     <!-- My Courses Section -->
-    <section class="fade-in-section Courses" id="Courses">
+    <section class="section-title fade-in-section Courses" id="Courses">
         <!-- Courses Heading -->
-        <h2 class="Heading">My <span>Courses</span></h2>
+        <h2 data-i18n="courses-heading" class="Heading">My <span>Courses</span></h2>
 
         <div class="row">
                 <div class="course">
                     <a href="">
                         <ion-icon  name="code-slash"></ion-icon>
-                        <h2>Web Development</h2>
-                        <p>Involves creating, building, and maintaining websites and web applications.</p>
+                        <h2 data-i18n="web-development-heading">Web Development</h2>
+                        <p data-i18n="web-development-description">Involves creating, building, and maintaining websites and web applications.</p>
                     </a>
                 </div>
 
                 <div class="course">
                     <a href="">
                         <ion-icon name="logo-electron"></ion-icon>
-                        <h2>Ai Development</h2>
-                        <p>The process of creating, training, and deploying artificial intelligence systems.</p>
+                        <h2 data-i18n="ai-development-heading">Ai Development</h2>
+                        <p data-i18n="ai-development-description">The process of creating, training, and deploying artificial intelligence systems.</p>
                     </a>
                 </div>
 
                 <div class="course">
                     <a href="">
                         <ion-icon name="game-controller"></ion-icon>
-                        <h2>Game Development</h2>
-                        <p>the process of designing, creating, and releasing video games. It combines creativity, storytelling, programming, and design to build interactive experiences.</p>
+                        <h2 data-i18n="game-development-heading">Game Development</h2>
+                        <p data-i18n="game-development-description">the process of designing, creating, and releasing video games. It combines creativity, storytelling, programming, and design to build interactive experiences.</p>
                     </a>
                 </div>
 
                 <div class="course">
                     <a href="">
                         <ion-icon name="brush"></ion-icon>
-                        <h2>Design</h2>
-                        <p> broad discipline focused on creating solutions that are both functional and aesthetically pleasing.</p>
+                        <h2 data-i18n="design-heading">Design</h2>
+                        <p data-i18n="design-description"> broad discipline focused on creating solutions that are both functional and aesthetically pleasing.</p>
                     </a>
                 </div>
 
                 <div class="course">
                     <a href="">
                         <ion-icon name="people"></ion-icon>
-                        <h2>Training</h2>
-                        <p>the process of transferring knowledge, skills, or attitudes from one person to others with the goal of helping them.</p>
+                        <h2 data-i18n="training-heading">Training</h2>
+                        <p data-i18n="training-description">the process of transferring knowledge, skills, or attitudes from one person to others with the goal of helping them.</p>
                     </a>
                 </div>
 
                 <div class="course">
                     <a href="">
                         <ion-icon name="hardware-chip-outline"></ion-icon>
-                        <h2>Hardware Development</h2>
-                        <p>the process of designing, building, testing, and producing physical electronic components and systems.</p>
+                        <h2 data-i18n="hardware-development-heading">Hardware Development</h2>
+                        <p data-i18n="hardware-development-description">the process of designing, building, testing, and producing physical electronic components and systems.</p>
                     </a>
                 </div>
         
     </section>
 
     <!-- My Project Section -->
-    <section class="fade-in-section MyProjects" id="MyProjects">
+    <section class="section-title fade-in-section MyProjects" id="MyProjects">
         <!-- Projects Heading -->
-        <h2 class="Heading">My <span>Projects</span></h2>
+        <h2 data-i18n="projects-heading" class="Heading">My <span>Projects</span></h2>
         
         <!-- Project Container -->
         <div class="Projects-Container">
@@ -247,9 +259,9 @@
             <div class="Project-Box">
                 <div class="Project-Info">
                     <ion-icon name="game-controller"></ion-icon>
-                    <h4>Game Development</h4>
-                    <p>Game <br>an entertaining activity or sport, especially one played by children, or the equipment needed for such an activity</p> <br>
-                    <a href="Projects/Games/Main.html">Let's see</a>
+                    <h4 data-i18n="game-development-heading">Game Development</h4>
+                    <p data-i18n="game-development-description">Game <br>an entertaining activity or sport, especially one played by children, or the equipment needed for such an activity</p> <br>
+                    <a data-i18n="project-button" href="Projects/Games/Main.html">Let's see</a>
                 </div>
             </div>
 
@@ -257,9 +269,9 @@
             <div class="Project-Box">
                 <div class="Project-Info">
                     <ion-icon name="code-slash"></ion-icon>
-                    <h4>Web Development</h4>
-                    <p>Website<br> is a computer system that links documents and pictures into a database that is stored in computers in many different parts of the world and that people everywhere can use.</p><br>
-                    <a href="#">Let's see</a>
+                    <h4 data-i18n="web-development-heading">Web Development</h4>
+                    <p data-i18n="web-development-description">Website<br> is a computer system that links documents and pictures into a database that is stored in computers in many different parts of the world and that people everywhere can use.</p><br>
+                    <a data-i18n="project-button" href="#">Let's see</a>
                 </div>
             </div>
 
@@ -267,18 +279,18 @@
             <div class="Project-Box">
                 <div class="Project-Info">
                     <ion-icon name="cube"></ion-icon>
-                    <h4>Cube</h4>
-                    <p>This section contains some projects I've programmed myself to learn, develop, or solve specific problems. Different techniques and technologies are used as needed, and this is some of the research the area requires.</p><br>
-                    <a href="#">Let's see</a>
+                    <h4 data-i18n="hardware-development-heading">Hardware Development</h4>
+                    <p data-i18n="hardware-development-description">This section contains some projects I've programmed myself to learn, develop, or solve specific problems. Different techniques and technologies are used as needed, and this is some of the research the area requires.</p><br>
+                    <a data-i18n="project-button" href="#">Let's see</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Me Section -->
-    <section class="fade-in-section ContactMe" id="ContactMe">
+    <section class="section-title fade-in-section ContactMe" id="ContactMe">
         <!-- Contact Me Heading -->
-        <h2 class="Heading">Contact <span>Me</span></h2>
+        <h2  data-i18n="contact-heading" class="Heading">Contact <span>Me</span></h2>
 
         <!-- Contact Container-->
         <div class="contact-container">
@@ -288,7 +300,7 @@
             <a href="tel:01019976730" class="contact-item">
                 <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
                 <div class="text">
-                <strong>Phone Number</strong><br>
+                <strong data-i18n="phone-number">Phone Number</strong><br>
                 <span>01019976730</span>
                 </div>
             </a>
@@ -296,7 +308,7 @@
             <a href="mailto:mohamadanime012@gmail.com" class="contact-item">
                 <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
                 <div class="text">
-                <strong>Email</strong><br>
+                <strong data-i18n="email">Email</strong><br>
                 <span>mohamadanime012@gmail.com</span>
                 </div>
             </a>
@@ -304,7 +316,7 @@
             <a href="" target="_blank" class="contact-item">
                 <div class="icon"><ion-icon name="remove-outline"></ion-icon></div>
                 <div class="text">
-                <strong>Coming Soon</strong><br>
+                <strong data-i18n="coming-soon">Coming Soon</strong><br>
                 <span>Example</span>
                 </div>
             </a>
@@ -312,7 +324,7 @@
             <a href="" target="_blank" class="contact-item">
                 <div class="icon"><ion-icon name="remove-outline"></ion-icon></div>
                 <div class="text">
-                <strong>Coming Soon</strong><br>
+                <strong data-i18n="coming-soon">Coming Soon</strong><br>
                 <span>Example</span>
                 </div>
             </a>
@@ -338,13 +350,13 @@
                 <div class="screen-body">
                     <div class="screen-body-item left">
                     <div class="app-title">
-                        <span id="outline">Contact Me</span>
+                        <span id="outline" data-i18n="contact-form-title">Contact Me</span>
                     </div>
                     </div>
                     <div class="screen-body-item">
                     <div class="app-form">
                         <div class="app-form-group">
-                        <input class="app-form-control" placeholder="Name" type="text" name="name" id="name" required>
+                        <input  class="app-form-control" placeholder="Name" type="text" name="name" id="name" required>
                         </div>
                         <div class="app-form-group">
                         <input class="app-form-control" placeholder="Email" type="email" name="email" id="email" required>
@@ -356,8 +368,8 @@
                         <input class="app-form-control" placeholder="Message" type="text" name="message" id="message" required>
                         </div>
                         <div class="app-form-group buttons">
-                        <button class="app-form-button" type="reset">Cancel</button>
-                        <button class="app-form-button" type="submit">Send</button>
+                        <button data-i18n="cancel" class="app-form-button" type="reset">Cancel</button>
+                        <button data-i18n="send" class="app-form-button" type="submit">Send</button>
                         </div>
                     </div>
                     </div>
@@ -385,24 +397,24 @@
         <!-- Footer List -->
         <ul class="List">
             <li>
-                <a href="#">FAQ</a>
+                <a data-i18n="faq" href="#">FAQ</a>
             </li>
 
             <li>
-                <a href="#AboutMe">About <span>Me</span></a>
+                <a data-i18n="about-me" href="#AboutMe">About <span>Me</span></a>
             </li>
 
             <li>
-                <a href="#MyProjects">My <span>Projects</span></a>
+                <a data-i18n="my-projects" href="#MyProjects">My <span>Projects</span></a>
             </li>
 
             <li>
-                <a href="#ContactMe">Contact <span>Me</span></a>
+                <a data-i18n="contact-me" href="#ContactMe">Contact <span>Me</span></a>
             </li>
         </ul>
 
         <!-- Get Copyright -->
-        <p class="copyright"  id="outline">
+        <p data-i18n="copyright" class="copyright"  id="outline">
             © Mohamad Ashraf | All Rights Reserved
         </p>
     </footer>
@@ -415,6 +427,43 @@
     <!-- Javascript Get Link -->
     <script src="Script.js"></script>
 
+    <!-- Simple scroll to section script -->
+    <script>
+        // Smooth scroll to sections with proper offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (!targetElement) return;
+            
+            e.preventDefault();
+            
+            // Calculate position with header offset
+            const headerHeight = 100; // Fixed value that works
+            const targetPosition = targetElement.offsetTop - headerHeight;
+            
+            // Smooth scroll
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Update URL
+            history.pushState(null, null, targetId);
+            
+            // Close mobile menu if open
+            const hamMenu = document.querySelector('.Menu-icon');
+            const offScreenMenu = document.querySelector('.Navigation-bar');
+            if (offScreenMenu && offScreenMenu.classList.contains('active')) {
+                offScreenMenu.classList.remove('active');
+                hamMenu.classList.remove('active');
+            }
+            });
+        });
+    </script>
+
     <!-- Achievements System -->
     <!--<script src="Achievements.js"></script>-->
 
@@ -424,14 +473,17 @@
     <!-- Typed Effect CDN -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+    <!-- Language Switcher -->
+    <script src="language-switcher.js"></script>
+
     <!-- Hidden Message -->
     <script>
         console.log("👋 Hey nerd! You found the console easter egg. Are you spying on my bugs?");
     </script>
 
-    <!-- Type Effect Script -->
+    <!-- Typed Effect Script -->
     <script>
-        var typed = new Typed(".multiple-text",{
+        window.typed = new Typed(".multiple-text",{
             strings : ["Programmer", "Designer", "Trainer", "Fullstack Developer", "App Developer", "Game Developer"],
             typeSpeed : 150,
             backSpeed : 150,
@@ -452,7 +504,7 @@
 
     <!-- Form Submit Succes Script -->
     <script>
-        .then(async (response) => {
+        then(async (response) => {
           let json = await response.json();
           if (response.status == 200) {
               window.location.href = "success.html"
