@@ -427,42 +427,7 @@
     <!-- Javascript Get Link -->
     <script src="Script.js"></script>
 
-    <!-- Simple scroll to section script -->
-    <script>
-        // Smooth scroll to sections with proper offset
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (!targetElement) return;
-            
-            e.preventDefault();
-            
-            // Calculate position with header offset
-            const headerHeight = 100; // Fixed value that works
-            const targetPosition = targetElement.offsetTop - headerHeight;
-            
-            // Smooth scroll
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-            
-            // Update URL
-            history.pushState(null, null, targetId);
-            
-            // Close mobile menu if open
-            const hamMenu = document.querySelector('.Menu-icon');
-            const offScreenMenu = document.querySelector('.Navigation-bar');
-            if (offScreenMenu && offScreenMenu.classList.contains('active')) {
-                offScreenMenu.classList.remove('active');
-                hamMenu.classList.remove('active');
-            }
-            });
-        });
-    </script>
+    <!-- Removed custom scroll handling; using native browser scrolling and no scroll-related CSS or JS -->
 
     <!-- Achievements System -->
     <!--<script src="Achievements.js"></script>-->
