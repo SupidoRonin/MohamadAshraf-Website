@@ -28,9 +28,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Ensure sections also honor the header offset for browsers that use scroll-margin */
-/* scroll-margin-top removed — native scroll will be used */
-
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
@@ -98,7 +95,7 @@ a {
   /* Wifi Status Notification */
   --offline-color: #a3485a; /* Light Red Accent */
   --online-color: #628141; /* Teal Accent */
-  --wifi-background: #f5e7c6; /* Light Beige Accent */
+  --wifi-background: #6E5034; /* Light Beige Accent */
 
   /* Cursor */
   --cursor-color: #7e6a50; /* Mushroom Beige for cursor */
@@ -121,7 +118,7 @@ a {
   /* Wifi Status Notification */
   --offline-color: #842a3b; /* Dark Red Accent */
   --online-color: #40513b; /* Dark Teal Accent */
-  --wifi-background: #faf3e1; /* Light Beige Accent */
+  --wifi-background: #CDB885; /* Light Beige Accent */
 
   /* Cursor */
   --cursor-color: #faf7ee; /* Mushroom Beige for cursor */
@@ -245,7 +242,8 @@ a {
   position: fixed;
   width: 70%;
   top: 0;
-  left: -50;
+  left: 50%;
+  transform: translateX(-50%);
   min-height: 50px;
   margin-top: 20px;
   padding: 0rem 2%;
